@@ -7,7 +7,8 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "extensions": [".js", ".jsx", ".ts",
+           ".tsx", ".stories.js"],
         "paths": ["src"]
       }
     }
@@ -25,6 +26,7 @@
         "depth": 25
       }
     ],
+    "no-console": "off",
     "import/order": [
       "error",
       {

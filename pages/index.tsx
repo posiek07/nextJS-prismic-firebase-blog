@@ -19,21 +19,12 @@ export const getStaticProps = useGetStaticProps({
   queryType: 'single',
 });
 
-const Index = (props) => {
-  return (
-    <Main
-      meta={(
-        <Meta
-          title="NextJS Prismic Sockbutler Home"
-          description="Sockbutler Home page"
-        />
-      )}
-    >
-      <div className="flex">
-        <SliceZone {...props} resolver={resolver} />
-      </div>
-    </Main>
-  );
-};
+const Index = (props) => (
+  <Main meta={<Meta title="NextJS Prismic Sockbutler Home" description="Sockbutler Home page" />}>
+    <div className="flex">
+      <SliceZone {...props} resolver={resolver} />
+    </div>
+  </Main>
+);
 
 export default Index;
