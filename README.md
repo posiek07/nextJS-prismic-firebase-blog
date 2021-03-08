@@ -18,13 +18,13 @@ Implemented new Prismic SliceMachine for Next.JS for easier content menagment an
 ## Install
 
 ```sh
-npm install
+yarn install
 ```
 
 ## Usage
 
 ```sh
-npm run dev
+yarn dev
 ```
 
 ## Author
