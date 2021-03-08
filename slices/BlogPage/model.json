@@ -1,0 +1,55 @@
+{
+  "id": "blog_page",
+  "type": "SharedSlice",
+  "name": "BlogPage",
+  "description": "BlogPage",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "BlogPage",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
+          }
+        },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "bgImage": {
+          "type": "Image",
+          "config": {
+            "id": "bgImage",
+            "label": "",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "extraDescription": {
+          "type": "StructuredText",
+          "config": {
+            "label": "",
+            "id": "extraDescription",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      }
+    }
+  ]
+}

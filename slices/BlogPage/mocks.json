@@ -1,0 +1,64 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "BlogPage",
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Duis aute irure sint veniam labore est nisi mollit.",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Ad officia incididunt laboris sit do commodo dolor voluptate ipsum ea. Tempor in reprehenderit occaecat ea duis amet officia commodo veniam qui Lorem esse ullamco cupidatat.",
+          "spans": []
+        }
+      ],
+      "bgImage": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
+      }
+    },
+    "items": [
+      {
+        "extraDescription": [
+          {
+            "type": "paragraph",
+            "text": "Quis ut sint dolore excepteur nulla. Dolore magna irure minim ad aliquip.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "extraDescription": [
+          {
+            "type": "paragraph",
+            "text": "Magna id eiusmod exercitation eu aliqua. Laboris culpa adipisicing veniam consectetur labore cupidatat labore laborum et et eu. Nostrud duis amet culpa proident aute nisi enim.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "extraDescription": [
+          {
+            "type": "paragraph",
+            "text": "Ea aliqua occaecat cillum minim.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "slice_type": "blog_page"
+  }
+]

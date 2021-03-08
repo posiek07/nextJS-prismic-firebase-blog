@@ -1,0 +1,36 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "HomePage",
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Optimize granular channels",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Eu qui eu aute mollit eiusmod consequat do.",
+          "spans": []
+        }
+      ],
+      "imageId": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
+      }
+    },
+    "items": [],
+    "slice_type": "home_page"
+  }
+]

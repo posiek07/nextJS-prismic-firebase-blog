@@ -1,0 +1,29 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ],
+        "styled-jsx": {
+          "plugins": [
+            "styled-jsx-plugin-postcss"
+          ]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "runtime": "automatic"
+      }
+    ],
+    "react-require"
+  ]
+}
