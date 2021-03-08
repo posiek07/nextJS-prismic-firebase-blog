@@ -3,6 +3,8 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './slices/**/*.{js,ts,jsx,tsx}',
+    './layout/**/*.{js,ts,jsx,tsx}',
+    './templates/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: false,
   theme: {
