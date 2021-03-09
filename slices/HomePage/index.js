@@ -19,13 +19,7 @@ const MySlice = ({ slice }) => (
       ) : (
         <p>start by editing this slice from inside the SliceMachine builder!</p>
       )}
-      {slice.primary.imageId ? (
-        <img
-          className="shadow rounded max-w-full h-auto align-middle border-none"
-          src={slice.primary.imageId.url}
-          alt={slice.primary.imageId.alt}
-        />
-      ) : (
+      {slice.primary.imageId && (
         <img
           className="shadow rounded max-w-full h-auto align-middle border-none"
           src={slice.primary.imageId.url}

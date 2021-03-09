@@ -1,11 +1,10 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable max-len */
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/prop-types */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
 import { Fragment } from 'react';
 
 import { Slices as EssentialSlices } from 'essential-slices';
