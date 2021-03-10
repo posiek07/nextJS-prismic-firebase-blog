@@ -6,7 +6,7 @@ import LoginForm from '../components/LoginForm';
 import { Meta } from '../layout/Meta';
 import { Main } from '../templates/Main';
 
-const SignUpPage: React.FC = () => (
+const LoginPage: React.FC = () => (
   <Main meta={<Meta title="Sign up" description="Sign up" />}>
     <div className="min-h-screen flex flex-col">
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
@@ -28,4 +28,4 @@ const SignUpPage: React.FC = () => (
     </div>
   </Main>
 );
-export default SignUpPage;
+export default LoginPage;

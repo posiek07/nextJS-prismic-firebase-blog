@@ -3,17 +3,11 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 
-import { auth, db } from '../config/firebase';
+import { useAuth, UserSignUp } from '../hooks/useAuth';
 import Button from './Button';
 
-interface SignUpData {
-  name: string;
-  email: string;
-  password: string;
-}
-
 interface Error {
-  message: string
+  message: string;
 }
 
 const SignUpForm: React.FC = () => {
@@ -21,46 +15,27 @@ const SignUpForm: React.FC = () => {
   const [error, setError] = useState<Error | null>(null);
   const router = useRouter();
   const { register, errors, handleSubmit } = useForm();
+  const auth = useAuth();
 
-  const createUser = (user: { uid: string, email: string, name: string }) => db
-    .collection('users')
-    .doc(user.uid)
-    .set(user)
-    .then(() => {
-      console.log('Success');
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-
-  const signUp = ({ name, email, password }: SignUpData) => {
+  const onSubmit = (data: UserSignUp) => {
     setIsLoading(true);
     setError(null);
-    return auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((response) => createUser({ uid: response.user!.uid, email, name }).then(() => {
-        setIsLoading(false);
-        router.push('/dashboard');
-      }))
-      .catch((err) => setError(err.message));
+    return auth.signUp(data).then((response: any) => {
+      setIsLoading(false);
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      response.error ? setError(response.error) : router.push('/dashboard');
+    });
   };
-
-  const onSubmit = (data: SignUpData) => signUp(data).then((user) => {
-    console.log(user);
-  });
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="rounded-md shadow-sm">
         {error?.message && (
-        <div className="mb-4 text-red-500 text-center border-dashed border border-red-600 p-2 rounded">
-          <span>{error.message}</span>
-        </div>
+          <div className="mb-4 text-red-500 text-center border-dashed border border-red-600 p-2 rounded">
+            <span>{error.message}</span>
+          </div>
         )}
-        <label
-          htmlFor="name"
-          className="block text-sm font-medium leading-5 text-gray-700"
-        >
+        <label htmlFor="name" className="block text-sm font-medium leading-5 text-gray-700">
           Name
         </label>
         <input
@@ -73,16 +48,11 @@ const SignUpForm: React.FC = () => {
           })}
         />
         {errors.password && (
-        <div className="mt-2 text-xs text-red-600">
-          {errors.password.message}
-        </div>
+          <div className="mt-2 text-xs text-red-600">{errors.password.message}</div>
         )}
       </div>
       <div className="mt-6">
-        <label
-          htmlFor="email"
-          className="block text-sm font-medium leading-5 text-gray-700"
-        >
+        <label htmlFor="email" className="block text-sm font-medium leading-5 text-gray-700">
           Email address
         </label>
         <div className="mt-1 rounded-md shadow-sm">
@@ -99,18 +69,11 @@ const SignUpForm: React.FC = () => {
               },
             })}
           />
-          {errors.email && (
-          <div className="mt-2 text-xs text-red-600">
-            {errors.email.message}
-          </div>
-          )}
+          {errors.email && <div className="mt-2 text-xs text-red-600">{errors.email.message}</div>}
         </div>
       </div>
       <div className="mt-6">
-        <label
-          htmlFor="password"
-          className="block text-sm font-medium leading-5 text-gray-700"
-        >
+        <label htmlFor="password" className="block text-sm font-medium leading-5 text-gray-700">
           Password
         </label>
         <div className="mt-1 rounded-md shadow-sm">
@@ -128,9 +91,7 @@ const SignUpForm: React.FC = () => {
             })}
           />
           {errors.password && (
-          <div className="mt-2 text-xs text-red-600">
-            {errors.password.message}
-          </div>
+            <div className="mt-2 text-xs text-red-600">{errors.password.message}</div>
           )}
         </div>
       </div>
