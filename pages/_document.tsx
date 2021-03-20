@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 
 import { createResolver } from 'next-slicezone/resolver';
@@ -16,7 +17,19 @@ export default class extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01RSFLL0C" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments)}
+        gtag("js", new Date());
+        gtag("config", 'G-F01RSFLL0C');
+    `,
+            }}
+          />
+        </Head>
         <body>
           <InitializeColorMode />
           <Main />
